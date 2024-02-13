@@ -10,10 +10,16 @@
 - The simplest path might just lead to success — no passwords needed here.
 
 
+```bash
+$ steghide extract -sf cpu_closeup.jpg
+```
+
+...
+
+```bash
+'$ flag.txt has been extracted...'
+cat flag.txt
+```
 
 
-### Parting Words
 
-"Hidden Depths" is your invitation to the enthralling realm of digital concealment. Embrace the challenge, and let your curiosity uncover the mysteries that lie beneath.
-
-Embark on this quest, and let the depths reveal their secrets!
