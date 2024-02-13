@@ -1,0 +1,29 @@
+name: "Probability Ability"
+author: "supaaasuge"
+category: "Miscellaneous"
+description: "Consider the probability of various unlikely events and order them from most likely to least likely. Connect to the provided service and submit your answer in the specified format to receive the flag."
+value: 250
+type: standard
+image: null
+protocol: null
+host: null
+connection_info: "`nc hostname 9999` to submit your answer."
+healthcheck: null
+attempts: null
+flags:
+  - "GrizzCTF{g00d_j0b_th1s_w4s_tr1cky}" # Replace this with the actual flag value
+topics:
+  - probability
+  - analysis
+  - math
+tags:
+  - crypto
+  - probability
+  - statistics
+files:
+  - src/challenge.txt
+hints:
+  - "Consider the probabilities in a logical order. The most unlikely events have the lowest chances of occurring."
+requirements: []
+state: visible
+version: "0.1"

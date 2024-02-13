@@ -1,0 +1,18 @@
+            # Consider the following five events:
+------------------------------------------------------------------------------------            
+- Correctly guessing a random 128-bit AES key on the first try.
+- Winning a lottery with 1 million contestants (the probability is 1/106 ).
+- Winning a lottery with 1 million contestants 5 times in a row (the probability is (1/106)5 ).
+- Winning a lottery with 1 million contestants 6 times in a row.
+- Winning a lottery with 1 million contestants 7 times in a row.
+
+What is the order of these events from most likely to least likely?
+
+Answer format: int, int, int, int, int
+
+Note: Once you have your answer, simply connect to the netcat service and submit your answer.
+x, x, x, x, x
+
+The correct answer will return the flag!
+
+Good luck!
