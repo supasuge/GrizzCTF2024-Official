@@ -36,7 +36,7 @@ This cipher works as folows:
 ```
 The Vigenere cipher is defined as a periodic **polyalphabetic substitution cipher**. In simpler terms, this simply means that there are different alphabet ordering's used based on the key. To explain how this cipher works, let's replace the characters of the key and the characters of the plaintext by integers, where A=0, B=1, ..., Z=25. The length of the key let's call period or $L$. So the key is just a set of numbers $k^0, k^1, ... k^{L-1}$. Next take the plaintext and express it also as a list of numbers $p^0, p^1, p^2, ...$
 The text is encrypted by adding a number from the key $mod (26)$ to a number from the plaintext, where we run through the key over and over again as needed as we run through the plaintext. As an equation, the $i^{th}$ character is encrypted as follows:
-$$c_i = (p_i+k_i) \mod (26)$$
+$$c_i = (p_i+k_i \mod L) \mod (26)$$
 
 
 ##### Source Code Example
