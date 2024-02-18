@@ -1,15 +1,9 @@
 # GrizzCTF 2024
 
 
-PWN is empty for the time being. I will likely spend thursday and friday putting these together. Only 3 total as this is kind of a lot of challenges already.
-- This can be discussed.
-
-
-##### TODO (Noted 02/13/24): 
+##### TODO (Noted 02/20/24): 
 - Copy over the `Dockerfile`, `docker-compose.yml`, and `xinet.d` for a few challenges; I forgot to copy these over although the files are already filled out other than changing some names.
-- Live Instance testing
-- Load testing on different challenges (threaded Purposeful DoS basically)... This is to ensure the challenge containers are configured to handle all the compute required in case there is a lot more participants than expected etc..
-
+    - Upload to instance for testing.
 
 
 #### Checklist
