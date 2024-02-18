@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+    <!--I spent approx. 20 minutes on this-->
+<head>
+    <title>Very Safe Login</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0a0a0a;
+            color: #39ff14;
+        }
+        .navbar {
+            background-color: #000;
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar a {
+            color: #39ff14;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 60px);
+        }
+        .login-form {
+            background-color: #1e1e1e;
+            padding: 40px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px 5px #ff0099;
+            width: 300px; 
+        }
+        .login-form h1 {
+            color: #ff0099;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            width: 107%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #ff0099;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff33aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+    </div>
+    <div class="centered-container">
+        <div class="login-form">
+	    <!-- hidden_ -->
+            <form action="/login" method="post">
+                <h1>Login to NeonGrid</h1>
+                <input type="text" name="username" placeholder="Username" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+            <!-- in_plain    -->
+        </div>
+    </div> <!-- _sight --> 
+</body>
+</html>
