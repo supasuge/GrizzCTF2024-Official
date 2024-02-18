@@ -74,7 +74,7 @@ Please note the below checklist is for official release testing purposes on the 
     - **Arigato Mr.Roboto(100 Points)**
     - [ ] Testing complete
     - [ ] Functional (Y/N)
-    - **Bad Authorization(150 Points~Not done)**
+    - **Bad Authorization(150 Points)**
     - [ ] Testing complete
     - [ ] Functional (Y/N)
     - **Oopsies!(250 Points)**
