@@ -99,8 +99,8 @@ def index():
         <header>
             <nav>
                 <ul>
-                    <li><a href="#hint1">Hint: Jinja</a></li>
-                    <li><a href="#hint2">Templating</a></li>
+                    <li><a href="#hint1">Hint: </a></li>
+                    <li><a href="#hint2">Jinja Templating</a></li>
                     <li><a href="#hint3">Engine</a></li>
                 </ul>
             </nav>
