@@ -70,11 +70,11 @@ Please note the below checklist is for official release testing purposes on the 
     - [ ] Tested on live instance
     - [ ] Functional (Y/N)
     - [ ] **Hidden Depths (250 Points)**
-    - [ ] Testing complete (local)
+    - [x] Testing complete (local)
     - [ ] Tested on live instance
     - [ ] Functional (Y/N)
     - [ ] **Wavy Karate(300 Points)**
-    - [ ] Testing complete (local)
+    - [x] Testing complete (local)
     - [ ] Tested on live instance
     - [ ] Functional (Y/N)
 
