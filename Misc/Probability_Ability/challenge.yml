@@ -2,7 +2,7 @@ name: "Probability Ability"
 author: "supaaasuge"
 category: "Miscellaneous"
 description: "Consider the probability of various unlikely events and order them from most likely to least likely. Connect to the provided service and submit your answer in the specified format to receive the flag."
-value: 250
+value: 500
 type: standard
 image: null
 protocol: null

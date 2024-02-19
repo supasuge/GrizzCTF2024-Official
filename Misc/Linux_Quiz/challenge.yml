@@ -6,7 +6,7 @@ name: "Linux_Quiz"
 author: "supaaasuge"
 category: Miscellaneous
 description: Can you pass this simple Linux CLI quiz? Submit all answers correctly to receive the flag.
-value: 100
+value: 150
 type: standard
 
 # The extra field provides additional fields for data during the install/sync commands/
