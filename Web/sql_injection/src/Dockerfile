@@ -16,7 +16,7 @@ EXPOSE 9000
 # Define environment variable
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
-ENV FLASK_RUN_PORT=6000
+ENV FLASK_RUN_PORT=9000
 
 # Run app.py when the container launches
 CMD ["flask", "run"]
