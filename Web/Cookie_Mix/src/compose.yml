@@ -1,0 +1,7 @@
+services: 
+  web: 
+    build:
+     context: app
+     target: builder
+    ports: 
+      - '3333:3333'

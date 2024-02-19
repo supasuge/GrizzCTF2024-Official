@@ -1,5 +1,6 @@
-from . import app
-from flask import send_file, render_template, url_for
+from flask import Flask, send_file, render_template, url_for
+
+app = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -19,3 +20,6 @@ def arigato():
 @app.route('/robots.txt')
 def serve_robots():
     return send_file('robots.txt')
+
+if __name__ == '__main__':
+    app.run(debug=True)

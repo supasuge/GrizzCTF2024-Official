@@ -1,5 +1,5 @@
 # Use the official Python image as the base image
-FROM python:3.9-slim
+FROM python:3.11-slim-buster AS builder
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -8,14 +8,17 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install the Python dependencies
-RUN pip install -r requirements.txt
+RUN pip3 install flask
 
 # Copy the Flask application to the working directory
 COPY app.py .
-COPY flag.txt .
+COPY config.py .
+COPY templates/ ./templates
+
+ENV FLASK_APP=app.py
 
 # Expose the port on which the Flask application will run
-EXPOSE 10000
+EXPOSE 7000
 
 # Set the command to run the Flask application
-CMD ["python", "app.py"]
+ENTRYPOINT ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=7000"]

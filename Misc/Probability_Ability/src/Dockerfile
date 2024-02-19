@@ -1,17 +1,15 @@
-FROM python:3.10-slim  
+FROM python:3.11-slim-bullseye  
 
-# Create a non-root user for better security
-RUN adduser -D appuser
 
 WORKDIR /app
 
 COPY server.py ans.txt flag.txt /app/
 
-USER appuser
-
+ENV SERVER_HOST 0.0.0.0
+ENV SERVER_PORT 9999
 EXPOSE 9999
 
-CMD ["python", "server.py"]
+CMD ["python", "./server.py"]
 
 
 # Buidl the docker image

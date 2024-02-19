@@ -77,8 +77,13 @@ if __name__ == "__main__":
 
 This challenge presents a flask website with a simple form to input a "secret cookie" to bypass authorization using a forged cookie + the guessed secret. Each time the page is reloaded a new cookie is used. The goal of this challenge is to bypass authorization using a forged cookie. 
 
-
-
+#### Build/Deployment instructions
+1. cd into the `src/app` directory where the Dockerfile is.
+`cd Cookie_Mix/src/app`
+2. Build the image
+`docker build -t cookie-mix .`
+3. Deploy the image
+`docker run -p 3333:3333 -dit --name cookies cookie-mix:latest`
 ##### Resources Used
 - [Flask Session Cookie Tampering (StackOverflow)](https://stackoverflow.com/questions/77340063/flask-session-cookie-tampering)
 - [Flask-unsign](https://github.com/Paradoxis/Flask-Unsign)

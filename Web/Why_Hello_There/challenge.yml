@@ -2,11 +2,11 @@
 # other tools to install and deploy your challenge.
 
 # Required sections
-name: "Bad_Authorization"
+name: "Why Hello There"
 author: "supaaasuge"
 category: Web Exploitation
-description: Can you 
-value: 300
+description: To receive the flag, find the vulnerability within the application and read flag.txt to receive the flag.
+value: 500
 type: standard
 
 # The extra field provides additional fields for data during the install/sync commands/
@@ -55,15 +55,13 @@ attempts: null
 # Accepts strings or dictionaries of CTFd API data
 flags:
     # A static case sensitive flag
-    - GrizzCTF{y0u_byp4223d_4uth_n01c3}
+    - GrizzCTF{ssti_frss_4ll}
     # A static case sensitive flag created with a dictionary
 
 # Topics are used to help tell what techniques/information a challenge involves
 # They are generally only visible to admins
 # Accepts strings
-topics:
-    - Authorization
-    - Flask
+topics: null
 
 # Tags are used to provide additional public tagging to a challenge
 # Can be removed if unused
@@ -73,18 +71,13 @@ tags: null
 # Provide paths to files from the same directory that this file is in
 # Accepts strings
 files:
-    - src/app.py
+    - src/app/app.py
 
 # Hints are used to give players a way to buy or have suggestions. They are not
 # required but can be nice.
 # Can be removed if unused
 # Accepts dictionaries or strings
-hints:
-    - {
-        content: "This hint costs points",
-        cost: 10
-    }
-    - This hint is free
+hints: null
 
 # Requirements are used to make a challenge require another challenge to be
 # solved before being available.
@@ -95,7 +88,7 @@ requirements: null
 # The state of the challenge.
 # If the field is omitted, the challenge is visible by default.
 # If provided, the field can take one of two values: hidden, visible.
-state: hidden
+state: visible
 
 # Specifies what version of the challenge specification was used.
 # Subject to change until ctfcli v1.0.0

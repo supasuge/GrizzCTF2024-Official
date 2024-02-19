@@ -27,7 +27,7 @@ def home():
     return render_template_string('''
         <html>
         <head>
-            <title>SQL Injection Challenge</title>
+            <title>SQLi</title>
             <style>
             body { 
                 font-family: 'Courier New', Courier, monospace; 
@@ -137,4 +137,4 @@ def login():
         return 'Login failed!'
     
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=9000)
+    app.run(debug=True)
