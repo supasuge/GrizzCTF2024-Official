@@ -11,10 +11,5 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 
-
-# Define environment variable
-ENV DISCORD_TOKEN your_token_here
-ENV DISCORD_CHANNEL_ID your_channel_id_here
-
 # Run bot.py when the container launches
-CMD ["python", "./bot.py"]
+CMD ["python", "bot.py"]
