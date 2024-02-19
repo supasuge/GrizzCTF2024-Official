@@ -29,7 +29,12 @@
 * **Refine with Feedback:** If the response misses the mark, provide feedback explaining why, and try rephrasing your query. Be specific about what you'd like to see changed in the output.
 * **Multi-Turn Conversations:**  Engage in dialogue with the LLM to build upon previous responses and fine-tune results.
 * **Verify the logical processes:** Tell the bot to output the response in a format such that it's logical decision making processes can be verified in the output (basically fact checks itself). 
+
 ### **Advanced Techniques**
+
+* **Chain of Thought (CoT) Prompting**: Provide your LLM with a step-by-step reasoning process, prompting it to break down problems  into smaller, easier-to-solve chunks.  This promotes more thorough and logical responses.
+
+* **Few-Shot Learning:** Supply a few carefully chosen examples (input/output pairs) to demonstrate the kind of response you expect.  The LLM often uses these to adjust its approach, giving better results.
 
 * **Code Formatting:** For code snippets, use triple backticks (```) followed by the language name for proper syntax highlighting:
 
