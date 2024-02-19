@@ -120,7 +120,7 @@ def index():
             <h2>Latest Blog Posts</h2>
             <div style="display: flex; flex-wrap: wrap; justify-content: center;">
                 <div class="post-card">
-                    <h3>SlickRick</h3>
+                    <h3>Slick Rick</h3>
                     <p>News Just In: No more gritz</p>
                     <a href="#" style="color: #fff;">Read More</a>
                 </div>
