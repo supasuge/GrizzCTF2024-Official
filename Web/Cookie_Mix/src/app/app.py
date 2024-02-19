@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, url_for, redirect, make_respo
 import random
 app = Flask(__name__)
 flag_value = open("./flag.txt").read().rstrip()
-title = "Bad Authorization"
+title = "Cookie Mix"
 # Updated list with the provided 'passwords'
 cookie_passwords = [
     "fatoubah",
