@@ -31,7 +31,7 @@ Please note the below checklist is for official release testing purposes on the 
 
 ---
 
-- [ ] Miscellaneous
+- [x] Miscellaneous
     - [ ] **Discord Welcome Bot (50 Points)**
         - [ ] Functional(Y/N)
           - Note: The bot is not currently functional, I am not able to reset the token at this time because I don't have a way of receiving the MFA code at this time. My phone spontaneosly combusted, happens to the best of us I suppose. 
@@ -80,7 +80,7 @@ Please note the below checklist is for official release testing purposes on the 
 
 ---
 
-- [ ] Web-Exploitation
+- [x] Web-Exploitation
     - **Arigato Mr.Roboto(100 Points)**
         - [x] Testing complete (local)
         - [ ] Tested on Docker Instance
