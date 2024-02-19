@@ -49,15 +49,21 @@ The RSA algorithm's strength lies in the challenge of factoring the modulus `n`.
    - Compute `φ(n) = (p - 1) * (q - 1)`.
    - Determine the private exponent `d` using the extended Euclidean algorithm or Python libraries:
      ```python
-     from Crypto.Util.number import inverse 
+     from Crypto.Util.number import inverse, long_to_bytes 
 
-     d = inverse(e, phi) 
-     ```
+     d = inverse(e, phi)
+      ```
 
 2. **Decrypt the Ciphertext:**
-   * Apply the decryption formula: `M = C^d mod n`.
-
+   - Apply the decryption formula: `M = C^d mod n`.
+```python
+plaintext= = pow(ciphertext, d, n)
+```
 3. **Decode the Message:**
    * Transform the decrypted numerical value `M` into its corresponding text representation to reveal the secret message.
-
+```python
+from Crypto.Util.number import inverse, long_to_bytes
+decryptedPlaintext = long_to_bytes(plaintext).decode()
+```
 **Let's get cracking!** 
+![Solution](image.png)

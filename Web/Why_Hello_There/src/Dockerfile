@@ -15,7 +15,7 @@ COPY app.py .
 COPY flag.txt .
 
 # Expose the port on which the Flask application will run
-EXPOSE 9000
+EXPOSE 10000
 
 # Set the command to run the Flask application
 CMD ["python", "app.py"]

@@ -2,7 +2,7 @@
     Difficulty: Easy
 ## Challenge Name: Oopsies!
 **Challenge Description:**
-In the "Oopsies!" challenge, participants are tasked with bypassing authentication to access a protected flag. This challenge tests the participant's understanding of web security, particularly in the areas of authentication and sensitive information discovery.
+In the "Oopsies!" challenge, participants are tasked with bypassing authentication to access a protected flag as the `admin` user. This challenge tests the participant's understanding of web security, particularly in the areas of authentication and sensitive information discovery.
 ___
 Challenge Resources:
     - [Flask Documentation](https://flask.palletsprojects.com/): Flask Web Framework
@@ -30,7 +30,7 @@ ___
     Look at the web pages source code, the HTML and CSS. (CTRL + U) to view source.
 ___
 **Step 4**: Attempting to Bypass Authentication
-    Within the source code, hidden_in_plain_sight can be found in the comments of the HTML. This is the password to login and get the flag.
+    Within the source code, `hidden_in_plain_sight` can be found in the comments of the `index.html` page. This is the password to login and get the flag.
 ___
 **Step 5**: Exploiting the Vulnerability
 
@@ -52,8 +52,6 @@ curl -X POST http://MACHINE_IP/login \
 ```
 
 ---
-![image](https://github.com/supaaasuge/GrizzCTF/assets/158092262/bd6a09e3-0649-462a-9a32-6ed757f08320)
-
-
+![Solution](image.png)
 
 

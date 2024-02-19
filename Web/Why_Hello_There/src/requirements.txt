@@ -1,3 +1,1 @@
-flask
-Flask-Session
-Flask-SQLAlchemy
+Flask==2.0.1

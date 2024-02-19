@@ -72,9 +72,9 @@ Please note the below checklist is for official release testing purposes on the 
 
 - [ ] Web-Exploitation
     - **Arigato Mr.Roboto(100 Points)**
-    - [ ] Testing complete
-    - [ ] Functional (Y/N)
-    - **Bad Authorization(150 Points)**
+    - [x] Testing complete
+    - [x] Functional (**Y**/N)
+    - **Cookie Mix(150 Points)**
     - [ ] Testing complete
     - [ ] Functional (Y/N)
     - **Oopsies!(250 Points)**

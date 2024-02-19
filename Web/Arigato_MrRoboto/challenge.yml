@@ -1,0 +1,23 @@
+name: "Arigato Mr.Roboto"
+author: "supaaasuge"
+category: Web
+
+
+Description: What I wouldn't give to be normal. To live in that bubble. Reality of the naive.
+
+
+
+value: 350
+type: dynamic
+
+decay: null
+minimum: null
+
+
+flags: 
+  - GrizzCTF{4bl0_4rig4t0_mr_r0b0to}
+
+tags:
+  - web
+
+state: hidden

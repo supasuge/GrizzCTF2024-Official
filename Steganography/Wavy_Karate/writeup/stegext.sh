@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE="CookinSoulXActionBronson_Karate_Frees.wav" # The file you're trying to extract data from
+FILE="linux_users.wav" # The file you're trying to extract data from
 WORDLIST="/usr/share/wordlists/rockyou.txt"
 
 while IFS= read -r line; do

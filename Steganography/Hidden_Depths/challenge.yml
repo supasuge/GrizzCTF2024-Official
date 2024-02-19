@@ -5,7 +5,7 @@
 name: "Hidden_Depths"
 author: "supaaasuge"
 category: Steganography
-description: Hidden within the depths of `cpu_closeup.jpg` is a file named `flag.txt`. Can you find it and retriece the flag?
+description: Hidden within the depths of `cpu_closeup.jpg` is a file named `flag.txt`. Can you find it and retrieve the flag?
 value: 100
 type: standard
 

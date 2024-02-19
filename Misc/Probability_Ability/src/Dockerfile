@@ -1,23 +1,16 @@
-FROM python:3.10-alpine
+FROM python:3.10-slim  
 
-# create a user to run the app
+# Create a non-root user for better security
 RUN adduser -D appuser
 
-# set working directory to /app
 WORKDIR /app
 
-# copy server.py, ans.txt, and flag.txt files into the working directory
 COPY server.py ans.txt flag.txt /app/
-
-# change ownership to the new user
-RUN chown -R appuser:appuser /app
 
 USER appuser
 
-# expose port 9999 for the challenge.
 EXPOSE 9999
 
-# run the python server (challenge)
 CMD ["python", "server.py"]
 
 

@@ -24,6 +24,6 @@ files:
   - src/challenge.txt
 hints:
   - "Consider the probabilities in a logical order. The most unlikely events have the lowest chances of occurring."
-requirements: []
+requirements: null
 state: visible
 version: "0.1"

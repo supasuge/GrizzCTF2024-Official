@@ -1,17 +1,19 @@
 import os
-import logging
 from dotenv import load_dotenv
 from discord import Intents, Client
-
-from responses import generate_flag
+import random
+import string
 
 # Load environment variables
 load_dotenv()  
 TOKEN = os.getenv('DISCORD_TOKEN')
 CHANNEL_ID = int(os.getenv('DISCORD_CHANNEL_ID'))
 
-# Set up logging - This is only to ensure there are no errors in-case of unforseen issues
-logging.basicConfig(level=logging.INFO)
+def generate_flag():
+    digits_part = ''.join(random.choices(string.digits, k=10))
+    chars_part = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
+    return f"GrizzCTF{{{digits_part}{chars_part}}}"
+
 
 intents = Intents.default()
 intents.messages = True # message perms
@@ -22,18 +24,19 @@ client = Client(intents=intents)
 
 @client.event
 async def on_ready():
-    logging.info(f'We have logged in as {client.user}')
+    print(f"{client.user} has connected to discord successfully")
 
 @client.event
 async def on_message(message):
-    logging.info(f'message: {message.content}, Author: {message.author}')
     if message.content.startswith('!flag'):
         flag = generate_flag()
         try:
             await message.author.send(f'`{flag}`')  # Send the flag in a private message
-            logging.info(f"Flag sent to {message.author}")
         except Exception as e:
-            logging.error(f"Error sending flag: {e}")
+            print(f"Error {e}, {message.author}")
 
 if __name__ == '__main__':
-    client.run(TOKEN)
+    try:
+        client.run(TOKEN)
+    except Exception as e:
+        print(f"Error {e}")

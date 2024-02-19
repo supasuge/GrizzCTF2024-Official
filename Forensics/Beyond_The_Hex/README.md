@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the "Magical Bytes" challenge, a cybersecurity puzzle designed to test your skills in digital forensics and file analysis. This challenge revolves around an image file named `cherryblossom.jpg`. However, not everything is as it seems. Your task is to uncover the true nature of this file.
+Welcome to the "Magical Bytes" challenge, a puzzle designed to test your skills in digital forensics and file analysis. This challenge revolves around an image file named `cherryblossom.jpg`. However, not everything is as it seems. Your task is to uncover the true nature of this file.
 
 ## Objective
 

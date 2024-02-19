@@ -3,11 +3,10 @@ from flask import Flask, request, render_template_string
 import sqlite3
 import json
 
-def send_flag(n):   
-    with open('/home/yaditydo/Desktop/CTFs/OU_OFFICIAL_CTF/.flags.json', 'r') as m:
-        data=json.load(m)
-        flag = data['webvulns']['flag'+str(n)]
-    return json.dumps({'flag': flag})
+def send_flag():   
+    with open('flag.txt', 'r') as m:
+        data=m.read().strip()
+    return json.dumps({'flag': data})
 
 app = Flask(__name__)
 
@@ -121,7 +120,7 @@ def IsloggedIn(bool):
         <div class="flag-container">
             <div class="flag">FLAG: {{flag}}</div>
         </div>
-    ''', flag=send_flag(2))
+    ''', flag=send_flag())
 
 
 
@@ -138,4 +137,4 @@ def login():
         return 'Login failed!'
     
 if __name__ == '__main__':
-    app.run(debug=False, port=6000)
+    app.run(host='0.0.0.0', debug=True, port=9000)

@@ -21,6 +21,6 @@ print(flag_bytes.decode("utf-8"))
 1. `pip install pwntools`
 2. `python ../src/solve.py`
 ```
-![alt text](image.png)
+![alt text](.\image.png)
 
 
