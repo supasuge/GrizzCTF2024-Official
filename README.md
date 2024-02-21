@@ -1,7 +1,7 @@
 # GrizzCTF 2024
 
 
-###### Last Updated: 4:29PM 02/19/2024 
+###### Last Updated: 12:04PM 02/21/2024 
 
 #### Checklist
 
