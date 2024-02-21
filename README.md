@@ -80,8 +80,7 @@ Please note the below checklist is for official release testing purposes on the 
 
     
 ---
-
-- [x] Web-Exploitation
+- Web-Exploitation
     - **Arigato Mr.Roboto(100 Points)**
         - [x] Testing complete (local)
         - [x] Tested on Docker Instance
