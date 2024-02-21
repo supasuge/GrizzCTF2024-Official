@@ -56,8 +56,8 @@ Please note the below checklist is for official release testing purposes on the 
 
 
 ---
-    
-- [ ] Forensics
+
+- Forensics
     - **Getting Started(50 Points)**
         - [x] Testing complete (local)
     - **El Exif(150 Points)**
