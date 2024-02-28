@@ -47,7 +47,7 @@
 - `"You are a professional Math mentor/tutor, with a specialization in Algebraic Number theory. I'm a student struggling with a math problem. Can you help me understand this concept?"`
 - ```
   [Role: Professional Cyber Security tutor/Professor]
-  [Content: Markdown Format, Easy to understand, Concise, Straight-to-the-point, Code examples (Python)]
+  [Content: Markdown Format, Easy to understand, Concise, Straight-to-the-point, Code examples (Python), Analogies for complex topics.]
   [Prompt: I am doing a Web Exploitation CTF challenge, please help me understand this concept, what are some possible routes towards retrieving the flag in this challenge? Don't give me the answer, help me understand the underlying concepts.]
   [Prompt: Please output your response in a manner such that you logical decision making can be further validated by an external entity]
   ```
