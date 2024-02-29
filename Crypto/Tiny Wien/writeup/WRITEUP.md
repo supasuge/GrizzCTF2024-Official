@@ -1,3 +1,12 @@
+# RSA Review
+N is the product of two randomly chosen prime numbers $\(p\) and \(q\)$. The private key, $\(d\)$, is the decryption exponent:
+$$d = e^{-1} \mod ((p-1)(q-1)) = e^{-1} \mod \varphi(N)$$
+
+Where $\(\varphi(N)\)$ is Euler’s totient function.
+
+That is, there exists an integer $\(k\)$ such that $\(ed - k\varphi(N) = 1\)$, therefore:
+$$\varphi(N) = \frac{ed - 1}{k}$$
+
 ```python
 from Crypto.Util.number import long_to_bytes,bytes_to_long
 import sys
