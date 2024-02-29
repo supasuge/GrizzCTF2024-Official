@@ -32,7 +32,7 @@ In polyalphabetic ciphers like vigenere, where the same plaintext letter can bec
 3. **GCD & Key Length**: Find the greatest common divisor (GCD) of the repeated sequence spacings. This GCD provides the most probable key length.
 4. Once a key length is found, we can begin to refine our brute-force search for our target sequence; which in this case is the flag `GRIZZCTF`
 
-###### Implementation
+###### Kasiski Exmaniation Python Implementation
 ```python
 import string
 from collections import defaultdict
@@ -111,7 +111,7 @@ print(tabulate(brute_force_results, headers="keys"))
 ![alt text](image.png)
 
 # Solution Method 2 (Manual)
-Due to the partial plaintext given, it is relatively easy to simply reverse the encryption using the know values to find the repeating key sequence. This can be seen below:
+Due to the partial plaintext given, it is relatively easy to manually reverse the encryption using the known values to find the repeating key sequence. This can be seen as follows below:
 
 ```
 Ciphertext: 
@@ -159,9 +159,13 @@ GSKZAETGQUPWOVHLBIRJIHUJESGGSKZANYCGASUIMQVFIRJBZMABFCRTIRJBZMABFCRTCNEETGOALGSN
 GRIZZCTFxxxxxxxxxxxxxxxxxxxGRIZZLYBEARSILOVEGRIZZLYBEARSGRIZZLYBEARSANDCTFMAKESMEHAPPY
 ```
 Above, we can easily notice that the first letter is unchanged. This means the key is likely letter A for this position.
+$G+A[0] mod 26$ -> 0 (Plaintext Unchanged in ciphertext)
 
 A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A
 **G**SK**Z**AE**T**GQ**U**PW**O**VH**L**BI**R**JI**H**UJ**E**SG**G**SK**Z**AN**Y**CG**A**SU**I**MQ**V**FI**R**JB**Z**MA**B**FC**R**TI**R**JB**Z**MA**B**FC**R**TC**N**EE**T**GO**A**LG**S**NG**H**BR**P**Z
-**G**RI**Z**ZC**T**FxxxxxxxxxxxxxxxxxxxGRIZZLYBEARSILOVEGRIZZLYBEARSGRIZZLYBEARSANDCTFMAKESMEHAPPY
+**G**RI**Z**ZC**T**Fx**x**xx**x**xx**x**xx**x**xx**x**xx**x**xx**G**RI**Z**ZL**Y**BE**A**RS**I**LO**V**EG**R**IZ**Z**LY**B**EA**R**SG**R**IZ**Z**LY**B**EA**R**SA**N**DC**T**FM**A**KE**S**ME**H**AP**P**Y
+
+Nice! So from the above example, the first letter of the key sequence is A. After analyzing the full ciphertext, this is a hit! Every third letter is unchanged and the key sequence is only 3 characters in length.
+
 
 
