@@ -45,7 +45,13 @@
 * **Role Specification:** For more creative responses, define roles:
 
 - `"You are a professional Math mentor/tutor, with a specialization in Algebraic Number theory. I'm a student struggling with a math problem. Can you help me understand this concept?"`
-
+- ```
+  [Role: Professional Cyber Security tutor/Professor]
+  [Content: Markdown Format, Easy to understand, Concise, Straight-to-the-point, Code examples (Python), Analogies for complex topics.]
+  [Prompt: I am doing a Web Exploitation CTF challenge, please help me understand this concept, what are some possible routes towards retrieving the flag in this challenge? Don't give me the answer, help me understand the underlying concepts.]
+  [Prompt: Please output your response in a manner such that you logical decision making can be further validated by an external entity]
+  ```
+   - By asking the bot to output the respond in a manner that can be validated by an external entity, it essentially fact checks itself automatically (sometimes). This can be very useful for getting more accurate responses. If you notice hallucinations, tell it where it was wrong and why. 
 
 ### **Tips for Using LLMs in CTFs**
 
@@ -55,7 +61,7 @@
 * **No Replacement for Tools:** LLMs are **not** substitutes for specialized cybersecurity tools like vulnerability scanners or exploit frameworks. They can supplement, but not replace, these specialized resources.
 
 **Providing Context for Optimal Use**
-
+* **Provide Similar Challenge  Writeups:** For example, if you are doing a RSA Crypto challenge, look up CTF writeups for similar challenges, and if it is useful for the given challenge, copy and paste the writeup in the LLM prompt to help you narrow down your logical deecision making. 
 * **Challenge Description:**  Give the LLM a brief summary of the challenge you're working on, including the overall objective and any specific clues or context you've gathered.
 * **Relevant Technologies:** Specify the technologies in play (e.g., "Reverse engineering a Linux binary," "Analyzing a web application for SQL injection"). This helps the LLM focus its response.
 * **Current Attempts:** Explain what you've already tried. This avoids the LLM simply repeating something you already know doesn't work.

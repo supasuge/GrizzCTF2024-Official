@@ -6,17 +6,19 @@
 The vigenere cipher is a polyalphabetic cipher invented by French Cryptologist **Blaise de Vigenere** in the *16th century*. Encryption with vigenere goes as follows:
 - Take the first letter of the message and the first letter of the key, add their value (letters have a value depending on there alphabetical index order beginning at A=0, B=1, ... Z=25). The result of the addition **modulo 26** give the enciphered letter as a result.
 Ex:
-- KEY = AZA | AZAAZAAZAAZAAZ
+- KEY = AZA
+```
+PLAINTEXT = TDSTSESSTERTER
+      KEY = AZAAZAAZAAZAAZ
+CIPHERTEXT= TDSTSESSTERTED
+```
+$A[0] + T[20] \mod(26) = T[20]$
+(Plaintext unchanged) 
 
-- PLAINTEXT = TESTTESTTESTES
+$Z[25] + E[4] \mod(26) = D[3]$
 
-- CIPHERTEXT= TDSTSESSTERTTD
-
-- A[0] + T[20] % 26 = T[0](Plaintext unchanged) 20 % 26 -> 0
-
-- Z[25] + E[4] % 26 = D[3]
-
-- A[0] + S[19] % 26 = S[0] (Plaintext unchanged) 19 % 26 -> 0
+$A[0] + S[19] \mod(26) = S[19]$
+(Plaintext unchanged)
 
 ... so on.
 
@@ -32,7 +34,7 @@ In polyalphabetic ciphers like vigenere, where the same plaintext letter can bec
 3. **GCD & Key Length**: Find the greatest common divisor (GCD) of the repeated sequence spacings. This GCD provides the most probable key length.
 4. Once a key length is found, we can begin to refine our brute-force search for our target sequence; which in this case is the flag `GRIZZCTF`
 
-###### Implementation
+###### Kasiski Exmaniation Python Implementation
 ```python
 import string
 from collections import defaultdict
@@ -110,5 +112,114 @@ print(tabulate(brute_force_results, headers="keys"))
 
 ![alt text](image.png)
 
+# Solution Method 2 (Manual)
+Due to the partial plaintext given, it is relatively easy to manually reverse the encryption using the known values to find the repeating key sequence. This can be seen as follows below:
+
+```
+Ciphertext: 
+
+GSKZAETGQUPWOVHLBIRJIHUJESGGSKZANYCGASUIMQVFIRJBZMABFCRTIRJBZMABFCRTCNEETGOALGSNGHBRPZ
+
+Known plaintext:
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxGRIZZLYBEARSILOVEGRIZZLYBEARSGRIZZLYBEARSANDCTFMAKESMEHAPPY
+
+Key: [REDACTED]
+
+[Vigenere Tableu for exemplary purposes]
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+BCDEFGHIJKLMNOPQRSTUVWXYZA
+CDEFGHIJKLMNOPQRSTUVWXYZAB
+DEFGHIJKLMNOPQRSTUVWXYZABC
+EFGHIJKLMNOPQRSTUVWXYZABCD
+FGHIJKLMNOPQRSTUVWXYZABCDE
+GHIJKLMNOPQRSTUVWXYZABCDEF
+HIJKLMNOPQRSTUVWXYZABCDEFG
+IJKLMNOPQRSTUVWXYZABCDEFGH
+JKLMNOPQRSTUVWXYZABCDEFGHI
+KLMNOPQRSTUVWXYZABCDEFGHIJ
+LMNOPQRSTUVWXYZABCDEFGHIJK
+MNOPQRSTUVWXYZABCDEFGHIJKL
+NOPQRSTUVWXYZABCDEFGHIJKLM
+OPQRSTUVWXYZABCDEFGHIJKLMN
+PQRSTUVWXYZABCDEFGHIJKLMNO
+QRSTUVWXYZABCDEFGHIJKLMNOP
+RSTUVWXYZABCDEFGHIJKLMNOPQ
+STUVWXYZABCDEFGHIJKLMNOPQR
+TUVWXYZABCDEFGHIJKLMNOPQRS
+UVWXYZABCDEFGHIJKLMNOPQRST
+VWXYZABCDEFGHIJKLMNOPQRSTU
+WXYZABCDEFGHIJKLMNOPQRSTUV
+XYZABCDEFGHIJKLMNOPQRSTUVW
+YZABCDEFGHIJKLMNOPQRSTUVWX
+ZABCDEFGHIJKLMNOPQRSTUVWXY
+```
+
+Because we know each flag starts with **GRIZZCTF** let's simply input this below the ciphertext along with the known plaintext to see what we can find manually:
+```
+GSKZAETGQUPWOVHLBIRJIHUJESGGSKZANYCGASUIMQVFIRJBZMABFCRTIRJBZMABFCRTCNEETGOALGSNGHBRPZ
+GRIZZCTFxxxxxxxxxxxxxxxxxxxGRIZZLYBEARSILOVEGRIZZLYBEARSGRIZZLYBEARSANDCTFMAKESMEHAPPY
+```
+Above, we can easily notice that the first letter is unchanged. This means the key is likely letter A for this index position.
+
+$$G[6] + A[0] \mod(26) = G[6]$$ 
+
+A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A
+**G**SK**Z**AE**T**GQ**U**PW**O**VH**L**BI**R**JI**H**UJ**E**SG**G**SK**Z**AN**Y**CG**A**SU**I**MQ**V**FI**R**JB**Z**MA**B**FC**R**TI**R**JB**Z**MA**B**FC**R**TC**N**EE**T**GO**A**LG**S**NG**H**BR**P**Z
+**G**RI**Z**ZC**T**Fx**x**xx**x**xx**x**xx**x**xx**x**xx**x**xx**G**RI**Z**ZL**Y**BE**A**RS**I**LO**V**EG**R**IZ**Z**LY**B**EA**R**SG**R**IZ**Z**LY**B**EA**R**SA**N**DC**T**FM**A**KE**S**ME**H**AP**P**Y
+
+Nice! So from the above example, the first letter of the key sequence is A. After analyzing the full ciphertext, this is a hit! Every third letter is unchanged and the key sequence is only 3 characters in length.
+
+```
+A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A..A
+GSKZAETGQUPWOVHLBIRJIHUJESGGSKZANYCGASUIMQVFIRJBZMABFCRTIRJBZMABFCRTCNEETGOALGSNGHBRPZ
+GRIZZCTFxUxxOxxLxxRxxHxxExxGRIZZLYBEARSILOVEGRIZZLYBEARSGRIZZLYBEARSANDCTFMAKESMEHAPPY
+```
+Now to find the second character in the key sequence it can be noted that **R** is encrypted to **S**, which can be written as seen below:
+
+$$R[17] + x \mod(26) = S[18]$$
+ 
+To manually find this character simply find R in the first row (A[0]) then move your mouse down until you hit S:
+```
+In:                   R
+A(0) ABCDEFGHIJKLMNOPQRSTUVWXYZ
+B(1) BCDEFGHIJKLMNOPQRSTUVWXYZA
+Out:                  S
+```
+$$R[17] + B[1] \mod(26) = S[18]$$
+
+- Nice! Because this is the 2nd row or index of 1, we can note here that B is the second letter in the key sequence.
+
+```
+AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB.AB
+GSKZAETGQUPWOVHLBIRJIHUJESGGSKZANYCGASUIMQVFIRJBZMABFCRTIRJBZMABFCRTCNEETGOALGSNGHBRPZ
+--------------------------------------------------------------------------------------
+GRIZZCTFOUOxOUxLAxRIxHTxERxGRIZZLYBEARSILOVEGRIZZLYBEARSGRIZZLYBEARSANDCTFMAKESMEHAPPY
+```
+
+From here, there is many ways to get the last key position. We could always just guess as well based off of what seems the most logical. However for the sake of the writeup, I will continue with the manual decryption.
+For the third letter (**I**) which is encrypted to (**K**) we can write this as:
+
+$$I[8] + x \mod(26) = K[10]$$
+
+We can then manually find this key letter using the same method as above as follows:
+
+```
+In:          I
+A(0) ABCDEFGHIJKLMNOPQRSTUVWXYZ
+B(1) BCDEFGHIJKLMNOPQRSTUVWXYZA
+C(2) CDEFGHIJKLMNOPQRSTUVWXYZAB
+Out:         K
+```
+$$I[8] + C[2] \mod(26) = K[10]$$
+
+And there it is, from above, we can then denote the full key sequence as `ABC`. Using this information, we can then fully decrypt the ciphertext.
+```
+GSKZAETGQUPWOVHLBIRJIHUJESGGSKZANYCGASUIMQVFIRJBZMABFCRTIRJBZMABFCRTCNEETGOALGSNGHBRPZ
+ABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCAB
+--------------------------------------------------------------------------------------
+GRIZZCTFOUOUOUFLAGRIGHTHEREGRIZZLYBEARSILOVEGRIZZLYBEARSGRIZZLYBEARSANDCTFMAKESMEHAPPY
+```
 
 

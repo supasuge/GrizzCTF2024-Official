@@ -10,9 +10,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 CHANNEL_ID = int(os.getenv('DISCORD_CHANNEL_ID'))
 
 def generate_flag():
-    digits_part = ''.join(random.choices(string.digits, k=10))
-    chars_part = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
-    return f"GrizzCTF{{{digits_part}{chars_part}}}"
+    return "GrizzCTF{D12c0rd_fl4g}"
 
 
 intents = Intents.default()

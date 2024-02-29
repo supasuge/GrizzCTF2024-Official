@@ -32,11 +32,8 @@ ___
 **Step 4**: Attempting to Bypass Authentication
     Within the source code, `hidden_in_plain_sight` can be found in the comments of the `index.html` page. This is the password to login and get the flag.
 ___
-**Step 5**: Exploiting the Vulnerability
 
-    Once a valid username/password is found, simply login to the portal to then receive get the flag.
-___
-**Step 6**: Accessing the Flag
+**Step 5**: Accessing the Flag
     After successful authentication, the application redirects to a /flag route.
     On this page, the flag follows the format GrizzCTF{...}
 
@@ -48,7 +45,7 @@ This CTF challenge showcased the importance of always making sure to perform sta
 **One-liner solution:**
 ```bash
 curl -X POST http://MACHINE_IP/login \
--d '{"username":"GrizzlyLord", "password":"hidden_in_plain_sight"}
+-d '{"username":"admin", "password":"hidden_in_plain_sight"}
 ```
 
 ---
