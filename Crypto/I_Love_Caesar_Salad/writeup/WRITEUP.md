@@ -74,3 +74,8 @@ print('Decrypted flag: ', flag)
 ```
 
 Executing this code will decrypt the ciphertext and reveal the original flag. 
+```
+Decrypted flag:  GrizzCTF{1_4lm02t_tr1ck3d_y04}
+```
+___
+
