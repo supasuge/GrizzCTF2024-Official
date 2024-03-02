@@ -15,6 +15,10 @@ cookie_passwords = [
     "melo33",
     "gabyboss10",
     "rockerswild",
+    "cookiejuan",
+    "cookietwo",
+    "cookieThree",
+    "cookieFour"
 ]
 
 app.secret_key = random.choice(cookie_passwords)

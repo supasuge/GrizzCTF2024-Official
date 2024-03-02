@@ -76,13 +76,13 @@ def home():
         </head>
         <body>
             <form action="/login" method="post">
-                <h2>Login Form</h2>
+                <h2>Secure login</h2>
                 <div>
-                    <label>Username:</label><br>
+                    <label>Username</label><br>
                     <input type="text" name="username"><br>
                 </div>
                 <div>
-                    <label>Password:</label><br>
+                    <label>Password</label><br>
                     <input type="password" name="password"><br>
                 </div>
                 <input type="submit" value="Login">
@@ -118,7 +118,7 @@ def IsloggedIn(bool):
             }
         </style>
         <div class="flag-container">
-            <div class="flag">FLAG: {{flag}}</div>
+            <div class="flag">{{flag}}</div>
         </div>
     ''', flag=send_flag())
 

@@ -13,7 +13,7 @@ body {
 
 /* Navbar Styling */
 .navbar {
-    background-color: rgba(62, 81, 81, 0.9); /* Semi-transparent background */
+    background-color: rgba(45, 48, 48, 0.9); /* Semi-transparent background */
     text-align: center;
     padding: 1em 0;
 }
@@ -42,9 +42,9 @@ body {
     color: #decba4;
 }
 
-/* Header */
+
 .bear-banner {
-    background: linear-gradient(120deg, #3e5151, #decba4);
+    background: linear-gradient(120deg, #51473e, #decba4);
     color: #fff;
     text-align: center;
     padding: 1em 0;
@@ -150,26 +150,22 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Utilize a modern font for headings */
 h1, h2 {
     font-family: 'Dancing Script', cursive;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    color: #3e5151; /* Dark color for contrast */
+    text-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+    color: #4a4b4e; /* Dark color for contrast */
 }
 
-/* Enhance the visual hierarchy */
 .intro h2, .call-to-action h2 {
-    color: #3e5151;
+    color: #08eaea;
     margin: 1em 0;
 }
 
-/* Improve readability of paragraphs */
 .intro p, .gallery p, .call-to-action p, .bear-cave p {
     line-height: 1.6;
     margin-bottom: 1em;
 }
 
-/* Style for the image captions */
 .gallery p {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 0.5em;

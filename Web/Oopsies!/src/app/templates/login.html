@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<html>
-    <!--I spent approx. 20 minutes on this-->
-<head>
     <title>Login</title>
     <style>
         body, html {
@@ -15,7 +13,7 @@
             color: #39ff14;
         }
         .navbar {
-            background-color: #000;
+            background-color: #272525;
             padding: 10px;
             text-align: center;
         }
@@ -33,10 +31,14 @@
         .login-form {
             background-color: #1e1e1e;
             padding: 40px;
-            margin-top: 20px;
             border-radius: 15px;
             box-shadow: 0 0 15px 5px #ff0099;
             width: 300px; 
+            animation: formAppear 0.5s ease-in-out;
+        }
+        @keyframes formAppear {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .login-form h1 {
             color: #ff0099;
@@ -44,24 +46,28 @@
             text-align: center;
         }
         input[type="text"], input[type="password"] {
-            width: 100%;
+            width: calc(100% - 20px); 
             padding: 10px;
             margin: 10px 0;
             border: none;
             border-radius: 5px;
+            box-sizing: border-box; 
         }
         button {
-            width: 107%;
+            width: calc(100% - 20px); 
             padding: 10px;
             margin-top: 10px;
-            background-color: #ff0099;
+            background-color: #7af120;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease; 
+            box-sizing: border-box; 
         }
         button:hover {
             background-color: #ff33aa;
+            transform: scale(1.05); 
         }
     </style>
 </head>
@@ -70,17 +76,18 @@
         <a href="/">Home</a>
         <a href="/login">Login</a>
     </div>
+    <!-- hidden_-->
     <div class="centered-container">
         <div class="login-form">
-	    <!-- hidden_ -->
             <form action="/login" method="post">
                 <h1>Login</h1>
-                <input type="text" name="username" placeholder="Username" required><br>
-                <input type="password" name="password" placeholder="Password" required><br>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
-            <!-- in_plain    -->
+            <!--in_plain-->
         </div>
-    </div> <!-- _sight --> 
+    </div>
 </body>
+<!--_sight -->
 </html>

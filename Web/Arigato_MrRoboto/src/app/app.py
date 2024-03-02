@@ -17,6 +17,10 @@ def arigato():
     flag_url = url_for('serve_flag')
     return f'<p><a href="{flag_url}">flag.txt</a></p>'
 
+@app.route('/fileupload')
+def FileUpload():
+    return render_template('fileupload.html')
+
 @app.route('/robots.txt')
 def serve_robots():
     return send_file('robots.txt')
