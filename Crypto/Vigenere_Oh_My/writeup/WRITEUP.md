@@ -180,7 +180,7 @@ Now to find the second character in the key sequence it can be noted that **R** 
 
 $$R[17] + x \mod(26) = S[18]$$
  
-To manually find this character simply find R in the first row (A[0]) then move your mouse down until you hit S:
+To manually find this character simply find R in the first row (A[0]) then move your mouse down until you hit S, or simply solve it as a equation:
 ```
 In:                   R
 A(0) ABCDEFGHIJKLMNOPQRSTUVWXYZ

@@ -1,6 +1,5 @@
-# Getting Started
-*50 Points*
-**Description:** Given the file `data.txt` submit the SHA256 hashsum of the file as the flag in the format: GrizzCTF{................................}
+# Getting Started (50 Points)
+**Description:** Given the file `data.txt` submit the SHA256 hashsum of the file as the flag in the format: `GrizzCTF{................................}`
 
 
 ## Solution

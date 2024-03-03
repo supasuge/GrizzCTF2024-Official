@@ -7,8 +7,7 @@ ___
 Challenge Resources:
     - [Flask Documentation](https://flask.palletsprojects.com/): Flask Web Framework
     - [Secure Hashing Basics](https://brilliant.org/wiki/secure-hashing-algorithms/): Understanding SHA-256
-    - [Web Exploitation](https://owasp.org/www-project-top-ten/)**** Techniques: OWASP Top 10
-    - [SHA-256](https://www.simplilearn.com/tutorials/cyber-security-tutorial/sha-256-algorithm)
+    - [Web Exploitation](https://owasp.org/www-project-top-ten/): OWASP Top 10
     - [Sensitive Data Exposure](https://www.manageengine.com/data-security/what-is/sensitive-data-exposure.html)
     - CTRL + U => view application source code (HTML/CSS)
 ##### Overview of the Steps toward the solution
