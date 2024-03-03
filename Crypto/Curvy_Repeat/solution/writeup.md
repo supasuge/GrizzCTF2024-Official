@@ -1,5 +1,6 @@
 # Curvy repeat (500 Points)
 - *Difficulty*: Hard
+
 This solution exploits the vulnerability of nonce reuse in ECDSA signatures. Given two signatures with the same nonce, one can recover the private key and decrypt an encrypted message.
 
 ### Mathematical Notation
