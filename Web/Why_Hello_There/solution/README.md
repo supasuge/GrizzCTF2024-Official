@@ -1,5 +1,5 @@
 # Why Hello There - SSTI Vulnerability
-**Description**: I have created a simple site to host my most favorite stuff. There is an issue with one of the parameters and I'm not sure what to do! Can you get the flag using this parameter?
+**Description**: 
 - *Hints*: Always be sure to sanitize user input!... Even ones that are not always visually obvious at first glance.
 
 ## Introduction

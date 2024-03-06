@@ -13,6 +13,6 @@ def decrypt(message):
     print(flag)
     return
 
-f = open("output.txt", "r")
+f = open("../src/output.txt", "r")
 ciphertext = f.readline().rstrip()
 decrypt(ciphertext)
