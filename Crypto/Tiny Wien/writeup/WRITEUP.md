@@ -98,30 +98,30 @@ The script starts by importing necessary Python libraries:
 
 #### Helper Functions
 - `get_prime()`: Presumed to generate large prime numbers for RSA key creation, not shown in the snippet.
-- `get_cf_expansion(n, d)`: Computes the continued fraction expansion of $\frac{n}{d}$ , where  $n$  and $d$ represent the RSA public exponent $e$ and the modulus $N$, respectively.
-- `get_convergents(e)`: From the continued fraction expansion, this function generates convergents, which are approximations of the fraction. Each convergent is represented by a pair (numerator, denominator) that closely approximates $ \frac{e}{N} $.
+- `get_cf_expansion(n, d)`: Computes the continued fraction expansion of $$\frac{n}{d}$$ where  $n$  and $d$ represent the RSA public exponent $e$ and the modulus $N$, respectively.
+- `get_convergents(e)`: From the continued fraction expansion, this function generates convergents, which are approximations of the fraction. Each convergent is represented by a pair (numerator, denominator) that closely approximates $$\frac{e}{N}$$
 
 #### RSA Parameters
-- `e`, `N`, and `C` are the RSA public exponent, modulus, and ciphertext, respectively, specific to this challenge.
+- $e$, $N$, and $C$ are the RSA public exponent, modulus, and ciphertext, respectively, specific to this challenge.
 
 #### Wiener's Attack Process
-1. **Continued Fraction Expansion**: The function `get_cf_expansion(e, N)` calculates the continued fraction expansion of $ \frac{e}{N} $ A continued fraction for a real number $x$ is expressed as:
+1. **Continued Fraction Expansion**: The function `get_cf_expansion(e, N)` calculates the continued fraction expansion of $$\frac{e}{N}$$ A continued fraction for a real number $x$ is expressed as:
    $$x = a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{a_3 + \cdots}}}$$
-   where $a_0, a_1, a_2, \ldots$ are integers. For $ \frac{e}{N} $, this expansion helps in finding fractions that approximate the true value of $ \frac{e}{N} $.
+   where $a_0, a_1, a_2, \ldots$ are integers. For $\frac{e}{N}$, this expansion helps in finding fractions that approximate the true value of $\frac{e}{N} $.
 
-2. **Compute Convergents**: The convergents are computed using the expansion, with each convergent providing a fraction that approximates $ \frac{e}{N} $ more closely. The $ i^{th} $ convergent $ \frac{n_i}{d_i} $ is calculated using the recursive formulas:
-   - $ n_i = a_i \cdot n_{i-1} + n_{i-2} $
-   - $ d_i = a_i \cdot d_{i-1} + d_{i-2} $
-   with initial conditions $ n_{-2} = 0, n_{-1} = 1, d_{-2} = 1, d_{-1} = 0 $.
+2. **Compute Convergents**: The convergents are computed using the expansion, with each convergent providing a fraction that approximates $\frac{e}{N}$ more closely. The $i^{th}$ convergent $\frac{n_i}{d_i}$ is calculated using the recursive formulas:
+   - $n_i = a_i \cdot n_{i-1} + n_{i-2}$
+   - $d_i = a_i \cdot d_{i-1} + d_{i-2}$
+   with initial conditions $n_{-2} = 0, n_{-1} = 1, d_{-2} = 1, d_{-1} = 0$
 
-3. **Iterate Over Convergents**: For each convergent $ \frac{n_i}{d_i} $, the script attempts to decrypt the ciphertext by:
-   - Calculating a potential $ \phi(N) $ using the relation $ \phi(N) = (e \cdot d_i - 1) / n_i $.
-   - Solving the quadratic equation $ p^2 + ( \phi(N) - N - 1 ) \cdot p + N = 0 $ to find potential prime factors $p$  and $q$ of $N$.
+3. **Iterate Over Convergents**: For each convergent $\frac{n_i}{d_i}$, the script attempts to decrypt the ciphertext by:
+   - Calculating a potential $\phi(N)$ using the relation $\phi(N) = (e \cdot d_i - 1) / n_i$
+   - Solving the quadratic equation $p^2 + ( \phi(N) - N - 1 ) \cdot p + N = 0$ to find potential prime factors $p$  and $q$ of $N$.
 
-4. **Verification and Decryption**: If the product of the computed primes equals $N$, the correct factors have been found. The private exponent $d$ is then calculated, and the original message is decrypted using $M = C^d \mod N $.
+4. **Verification and Decryption**: If the product of the computed primes equals $N$, the correct factors have been found. The private exponent $d$ is then calculated, and the original message is decrypted using $M = C^d \mod N$.
 
 #### Success and Failure Messages
-- Upon successfully finding $ p, $q$, and $d$, the script prints the decrypted message.
+- Upon successfully finding $p$, $q$, and $d$, the script prints the decrypted message.
 - If the attack fails to find the factors, it indicates Wiener's attack was unsuccessful.
 
 ###### Resources
