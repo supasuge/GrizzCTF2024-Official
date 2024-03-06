@@ -15,7 +15,9 @@ In computer science, "magic bytes" refer to the unique sequence of bytes at the 
 
 ![alt text](image.png)
 
-
+```
+GrizzCTF{89504E470D0A1A0A}
+```
 
 
 ###### Resources

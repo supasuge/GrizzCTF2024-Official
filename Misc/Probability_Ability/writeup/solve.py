@@ -2,6 +2,10 @@ from pwn import *
 import numpy as np
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4532569c52117c764fc565f4ebc2f4d85fe7cd80
 
 # Calculate event probabilities
 prob_aes_key = 1 / 2**128

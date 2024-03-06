@@ -17,15 +17,6 @@ def solve_congruence(a, b, m):
                 solutions.append((x0 + i * m_) % m)
         return solutions
 
-def recover_private_key(r, s1, s2, m1, m2, n):
-    # Ensure m1 and m2 are integers
-    m1 = int.from_bytes(m1, 'big')
-    m2 = int.from_bytes(m2, 'big')
-    
-    # Calculate the private key
-    k = (m1 - m2) * pow((s1 - s2), -1, n) % n
-    x = ((s1 * k) - m1) * pow(r, -1, n) % n
-    return x
 
 def attack(n, m1, r1, s1, m2, r2, s2):
     for k in solve_congruence(s1 - s2, m1 - m2, n):
