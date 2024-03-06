@@ -98,7 +98,7 @@ The script starts by importing necessary Python libraries:
 
 #### Helper Functions
 - `get_prime()`: Presumed to generate large prime numbers for RSA key creation, not shown in the snippet.
-- `get_cf_expansion(n, d)`: Computes the continued fraction expansion of $ \frac{n}{d}$ , where  $n$  and $d$ represent the RSA public exponent $e$ and the modulus $N$, respectively.
+- `get_cf_expansion(n, d)`: Computes the continued fraction expansion of $\frac{n}{d}$ , where  $n$  and $d$ represent the RSA public exponent $e$ and the modulus $N$, respectively.
 - `get_convergents(e)`: From the continued fraction expansion, this function generates convergents, which are approximations of the fraction. Each convergent is represented by a pair (numerator, denominator) that closely approximates $ \frac{e}{N} $.
 
 #### RSA Parameters
