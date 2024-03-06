@@ -34,7 +34,7 @@ The provided Python script encrypts a flag using a modified Caesar cipher and wr
 
 2. **For Lowercase Letters**: If the character is lowercase (`a-z`), it performs a similar operation as for uppercase letters but subtracts and adds `97` instead, to normalize `a` to `0`.
 
-3. **For Digits**: If the character is a digit (`0-9`), it converts the character to an integer, adds the shift value, applies modulo `10` to ensure the result is a single digit, and then converts it back to a string.
+3. **For Digits**: If the character is a digit (`0-9`), it adds the shift value, applies modulo `10` to ensure the result is a single digit, and then converts it back to a string.
 
 4. **For Other Characters**: If the character does not fall into the above categories, it is left unchanged.
 
