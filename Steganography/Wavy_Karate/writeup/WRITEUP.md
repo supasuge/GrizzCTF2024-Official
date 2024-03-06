@@ -25,4 +25,8 @@ while IFS= read -r line; do
   fi
 done < "$WORDLIST"
 ```
-- Note: It may take a while, it depends on how much hardware resources you have allocated to the VM. Assuming you are using a virtual machine running linux... that is.
+- Note: It may take a while, it depends on how much hardware resources you have allocated.
+
+```
+GrizzCTF{
+```
