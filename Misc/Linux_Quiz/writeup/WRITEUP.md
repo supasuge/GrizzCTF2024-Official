@@ -1,4 +1,7 @@
 # Linux Quiz
+Note: Challenge was scrapped due to not enough docker server instances from hosted CTFd instance.
+
+
 **Description:** Can you pass the Linux Quiz to receive the flag?
 
 ## Solution
