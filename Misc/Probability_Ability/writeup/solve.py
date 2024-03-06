@@ -3,7 +3,6 @@ import numpy as np
 
 
 
-# Receive banner 
 
 # Calculate event probabilities
 prob_aes_key = 1 / 2**128
