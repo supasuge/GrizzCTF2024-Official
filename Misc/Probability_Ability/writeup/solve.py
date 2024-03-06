@@ -1,13 +1,9 @@
 from pwn import *
 import numpy as np
 
-HOST = 'localhost'  # Update if different
-PORT = 9999        # Update if different
 
-conn = remote(HOST, PORT)
 
 # Receive banner 
-print(conn.recvuntil(b"Enter the answer: ").decode()) 
 
 # Calculate event probabilities
 prob_aes_key = 1 / 2**128
@@ -29,10 +25,4 @@ event_order = np.argsort(probabilities)[::-1] + 1
 # Format the answer string in the required format
 answer = ", ".join(str(x) for x in event_order)
 
-conn.sendline(answer.encode()) 
 
-# Receive flag or failure message
-response = conn.recvall().decode() 
-print(response) 
-
-conn.close()
