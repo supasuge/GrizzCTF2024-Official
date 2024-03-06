@@ -1,18 +1,17 @@
 # GrizzCTF Stego Challenge: Hidden in Plain Sight
 
-## Challenge Description
+Difficulty: Easy
 
-In this challenge, participants are provided with an ordinary-looking image. However, not everything is as it seems. Buried within the pixels of this image lies a secret message, a flag that you must uncover to complete the challenge. Your task is to analyze the image, unravel its secrets, and extract the hidden message.
+Description: Buried within the pixels of this image lies a secret message, a flag that you must uncover to complete the challenge. Your task is to analyze the image, unravel its secrets, and extract the hidden message. The flag format is as usual GrizzCTF{...........}
 
-This challenge requires a keen eye, a bit of creativity, and some programming skills. Are you ready to dive into the pixels and reveal the hidden truths?
 
 ### What You're Given
 
-Participants will be provided with a single PNG image file. Remember, the key to solving this challenge lies within this image.
+Participants are provided with a single `.PNG` image file `encoded_image.py`
 
 ### Objective
 
-Your objective is to decode the secret message hidden within the image and submit the flag in the format `GrizzCTF{your_discovered_message_here}`.
+Your objective is to decode the secret message hidden within the image and submit the flag.
 
 ### Tools You Might Need
 
