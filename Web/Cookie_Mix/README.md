@@ -1,4 +1,4 @@
-# Bad Authorization
+# Cookie Mix (150 Points)
 
 
 ```python
