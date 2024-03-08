@@ -1,4 +1,4 @@
-# Probability Ability
+# Probability Ability (500 Points)
 **Description:** Consider the following five events:
 1. Correctly guessing a random 128-bit AES key on the first try.
 2. Winning a lottery with 1 million contestants (the probability is 1/106 ).
