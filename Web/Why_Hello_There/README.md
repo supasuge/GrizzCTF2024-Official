@@ -1,4 +1,4 @@
-# Why Hello There
+# Why Hello There (500 Points)
 This challenge presents the participant with a single file `app.py`. This site is live on port `2222`. The vulnerability in this challenge lies within the parameter `{name}` and the lack of input escaping/sanitization.
 
 To identify the possible SSTI parameter send the following:
