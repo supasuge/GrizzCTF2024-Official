@@ -1,5 +1,4 @@
-# Br4ille
-*50 Points*
+# Br4ille (100 Points)
 **Description**: No words
 
 
