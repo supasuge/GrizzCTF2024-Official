@@ -5,7 +5,7 @@
 name: "Oopsies!"
 author: "supaaasuge"
 category: Web Exploitation
-description: Can you 
+description: Can you find the password and login as the `admin`? Doing so will retrieve the flag, good luck!
 value: 250
 type: standard
 
