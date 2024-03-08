@@ -3,4 +3,4 @@
 - Use `Audacity` to assist. Make sure to account for spaces in the flag with: '`_`' and wrap your final answer in `GrizzCTF`.
 
 ###### Challenge Resources
-- [morsecode.wav](..\src\morsecode.wav)
+- [morsecode.wav](https://github.com/supaaasuge/GrizzCTF2024-Official/blob/main/Misc/Morse_code/src/morsecode.wav)
