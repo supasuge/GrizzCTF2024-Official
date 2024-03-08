@@ -18,6 +18,6 @@ flag_bytes = xor(bytes.fromhex(ciphertext), key)
 print(flag_bytes.decode("utf-8"))
 
 ```
-![alt text](.\image.png)
+![alt text](image.png)
 
 
