@@ -6,7 +6,7 @@
 
 ## Cryptography challenges
 - [Based as 64(50 Points)](https://github.com/supaaasuge/GrizzCTF2024-Official/blob/main/Crypto/Based_as_64/README.md)
-- **Encoding and Boating(100 Points)**
+- [Encoding and Boating(100 Points)](https://github.com/supaaasuge/GrizzCTF2024-Official/blob/main/Crypto/Encoding_and_Boating/README.md)
 - **I love caesar salad(150 Points)**
 - **Can you XOR or NOT?(250 Points)**
 - **Vigenere! Oh my...(300 Points)**
