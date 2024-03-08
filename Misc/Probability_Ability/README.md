@@ -1,10 +1,19 @@
 # Probability Ability
+**Description:** Consider the following five events:
+1. Correctly guessing a random 128-bit AES key on the first try.
+2. Winning a lottery with 1 million contestants (the probability is 1/106 ).
+3. Winning a lottery with 1 million contestants 5 times in a row (the probability is (1/106)5 ).
+4. Winning a lottery with 1 million contestants 6 times in a row.
+5. Winning a lottery with 1 million contestants 7 times in a row. 
 
+**What is the order of these events from most likely to least likely?**
 
-#### Build/Deployment
-1. cd into the correct directory
-`cd Probability_Ability/src`
-2. Build the correct image
-`docker build -t probability-ability .`
-3. Deploy the image
-`docker run -dit -p 9999:9999 --name probability-ability probability-ability:latest`
+Answer format: `GrizzCTF{int, int, int, int, int}`
+
+- Note: This challenge was originally made as a live service to submit the answer to and receive the flag, however there were not enough docker container server instances for all of the challenges based off of the CTFd hosted tier.
+
+###### Resources
+- [crypto.stackexchange](https://crypto.stackexchange.com/questions/30749/probability-of-guessing-random-128-bit-aes-key)
+- [Week 2 - Problem Set](https://www.quizerry.com/wp-content/uploads/2021/01/Week-2-Problem-Set-_-Coursera-cryptography-I-2.pdf)
+- [Nerdology](https://printed-notes.blogspot.com/2013/09/block-ciphers-week-2.html)
+- [More from Dan Boneh](https://crypto.stanford.edu/~dabo/)

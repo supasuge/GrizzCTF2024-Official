@@ -1,4 +1,4 @@
-# Magical Bytes Challenge
+# Beyond the Hex (250 Points)
 
 ## Overview
 
@@ -10,15 +10,7 @@ Determine the actual format of `cherryblossom.jpg` and extract the hidden flag.
 
 ## Flag Format
 
-The flag is in the format: `GrizzCTF{magic_bytes_of_photo_here}`. You will need to find the magic bytes of the actual file format to complete the flag.
-
-## Instructions
-
-1. **Analyze the File:** Begin by examining the provided `cherryblossom.jpg` file. Use any tools or techniques at your disposal to understand its true format.
-2. **Extract Magic Bytes:** Identify and extract the magic bytes that reveal the file's actual format.
-3. **Construct the Flag:** Use the extracted magic bytes to construct the flag according to the specified format.
-4. **Submit the Flag:** Once you have the correct flag, submit it to complete the challenge.
-
+The flag is in the format: `GrizzCTF{XXXXXXXXXXXXXXXX}`. 
 ## Hints
 
 - The file's extension may be misleading. Look beyond it to understand the file's true content.
@@ -30,6 +22,9 @@ The flag is in the format: `GrizzCTF{magic_bytes_of_photo_here}`. You will need 
 - `file`: Determine the type of file.
 - `xxd` or similar hex editors: View the file's hexadecimal representation.
 
+###### Challenge Resources
+- [cherryblossom.jpg](./src/cherryblossom.jpg)
+![cherryblossom.jpg](./src/cherryblossom.jpg)
 
 
  
