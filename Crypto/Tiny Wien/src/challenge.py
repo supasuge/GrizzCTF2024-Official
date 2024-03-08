@@ -46,7 +46,7 @@ def challenge():
 
     C=pow(m,e,N)
     with open("parameters.txt", "w") as f:
-        f.write(f'Bob uses RSA to send an encrypted message to Alice...\n\nThe public exponent (e) is {e}\n\nThe public modulus (N) is {N}\n\nCiphertext: {C}\r\nCan you decrypt the ciphertext using Wiener\'s attack?')
+        f.write(f'Bob uses RSA to send an encrypted message to Alice...\n\nThe public exponent (e) is {e}\n\nThe public modulus (N) is {N}\n\nCiphertext: {C}\r\nCan you decrypt the ciphertext?')
         f.close()
 
 if __name__ == "__main__":
