@@ -3,3 +3,10 @@
 
 
 This challenge can be solved manually, or using a online braille translator.
+
+###### Challenge Resources
+- data.txt
+
+---
+
+[Writeup](./writeup/WRITEUP.md)
