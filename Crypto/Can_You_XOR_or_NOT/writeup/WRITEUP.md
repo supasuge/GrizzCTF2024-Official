@@ -18,9 +18,6 @@ flag_bytes = xor(bytes.fromhex(ciphertext), key)
 print(flag_bytes.decode("utf-8"))
 
 ```
-1. `pip install pwntools`
-2. `python ../src/solve.py`
-```
 ![alt text](.\image.png)
 
 
