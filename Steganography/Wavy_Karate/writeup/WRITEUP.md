@@ -1,10 +1,5 @@
 # Wavvy Karate
 
-This challenge provides the participant with the `.wav` file of the song: "https://www.youtube.com/watch?v=cLi05MF5X7Q".
-
-- **Update:** I am quite upset as I had to replace the fire tunes provided with a short video="https://www.youtube.com/watch?v=k-fVjHzxKzo".
-  - The song was *unsurprisingly* large... Unlucky. 
-
 To create this challenge, I provided the link of the song on youtube to: "https://y2down.cc/en/youtube-wav.html"
 
 Then I used `steghide` to embed `flag.txt` using a randomly selected password from `/usr/share/wordlists/rockyou.txt`.
