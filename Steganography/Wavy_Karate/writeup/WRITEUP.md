@@ -25,4 +25,10 @@ while IFS= read -r line; do
   fi
 done < "$WORDLIST"
 ```
-- Note: It may take a while, it depends on how much hardware resources you have allocated to the VM. Assuming you are using a virtual machine running linux... that is.
+- Note: It may take a while, it depends on how much hardware resources you have allocated.
+
+```
+GrizzCTF{lsb_1n_4_w4v_f1l3}
+```
+
+Truth be told, I am not entirely sure if steghide hides files using LSB Steg (I am going to asssume not)... However I simply forgot to change the flag when I was making the challenge. Happens.
