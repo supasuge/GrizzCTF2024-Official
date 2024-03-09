@@ -1,6 +1,6 @@
 # Wavvy Karate
 
-To create this challenge, I provided the link of the song on youtube to: "https://y2down.cc/en/youtube-wav.html"
+To create this challenge, I provided the link of the youtube video to: "https://y2down.cc/en/youtube-wav.html"
 
 Then I used `steghide` to embed `flag.txt` using a randomly selected password from `/usr/share/wordlists/rockyou.txt`.
 
