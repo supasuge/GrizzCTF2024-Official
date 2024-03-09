@@ -5,8 +5,8 @@
 
 ### How to Approach
 
-- Acquire Steghide, your indispensable companion for this journey.
-- Commandeer Steghide's capabilities to reveal and retrieve the hidden `flag.txt`.
+- Acquire Steghide
+- Use Steghide's capabilities to reveal and retrieve the hidden `flag.txt`.
 - The simplest path might just lead to success — no passwords needed here.
 
 
