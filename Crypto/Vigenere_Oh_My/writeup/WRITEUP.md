@@ -15,7 +15,7 @@ CIPHERTEXT= TCSTRESRTEQTEQ
 $A[0] + T[20] \mod(26) = T[20]$
 (Plaintext unchanged) 
 
-$Z[25] + E[4] \mod(26) = D[3]$
+$Z[25] + D[3] \mod(26) = C[2]$
 
 $A[0] + S[19] \mod(26) = S[19]$
 (Plaintext unchanged)
