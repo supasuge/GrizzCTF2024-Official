@@ -2,7 +2,7 @@
 - Category: Cryptography
 - Difficulty: Beginner/medium
 
-**Description:** A mysterious message has been intercepted, seemingly protected by a simple cipher. It appears to be XOR encryption, although something is afoot. Given the key used, can you decrypt the message?
+**Description:** Given the key used, can you decrypt the message?
 
 ##### Source Code (`solve.py`)
 ```python
