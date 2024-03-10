@@ -71,7 +71,7 @@ This payload works by accessing Python's built-in attributes to open and read a 
 ### Conclusion
 
 This challenge demonstrates the critical importance of sanitizing and validating all user inputs, especially when those inputs are used within template engines like Jinja2 in Flask applications. SSTI vulnerabilities can lead to significant security risks, including unauthorized access to sensitive data and system command execution. Always ensure user inputs are handled securely to prevent such vulnerabilities.
-note: The code above is not tested, but the payload is something along those lines.
+
 
 I.e.,
 ```
