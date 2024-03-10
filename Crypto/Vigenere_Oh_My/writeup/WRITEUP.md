@@ -35,6 +35,7 @@ In polyalphabetic ciphers like vigenere, where the same plaintext letter can bec
 4. Once a key length is found, we can begin to refine our brute-force search for our target sequence; which in this case is the flag `GRIZZCTF`
 
 ###### Kasiski Exmaniation Python Implementation
+Note: The code below has been adjusted for the constraints of this challenge
 ```python
 import string
 from collections import defaultdict
