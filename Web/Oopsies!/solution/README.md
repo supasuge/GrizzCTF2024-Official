@@ -5,10 +5,10 @@
 In the "Oopsies!" challenge, participants are tasked with bypassing authentication to access a protected flag as the `admin` user. This challenge tests the participant's understanding of web security, particularly in the areas of authentication and sensitive information discovery.
 ___
 Challenge Resources:
-    - [Flask Documentation](https://flask.palletsprojects.com/): Flask Web Framework
-    - [Secure Hashing Basics](https://brilliant.org/wiki/secure-hashing-algorithms/): Understanding SHA-256
-    - [Web Exploitation](https://owasp.org/www-project-top-ten/): OWASP Top 10
-    - [Sensitive Data Exposure](https://www.manageengine.com/data-security/what-is/sensitive-data-exposure.html)
+- [Flask Documentation](https://flask.palletsprojects.com/): Flask Web Framework
+- [Secure Hashing Basics](https://brilliant.org/wiki/secure-hashing-algorithms/): Understanding SHA-256
+- [Web Exploitation](https://owasp.org/www-project-top-ten/): OWASP Top 10
+- [Sensitive Data Exposure](https://www.manageengine.com/data-security/what-is/sensitive-data-exposure.html)
     - CTRL + U => view application source code (HTML/CSS)
 ##### Overview of the Steps toward the solution
 **Step 1**: Analyzing the Login Mechanism
