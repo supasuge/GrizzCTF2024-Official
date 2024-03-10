@@ -33,8 +33,8 @@ A hint can be found on the home page, in which a sensitive information disclosur
 Moving on to the login page:
 ![image](https://github.com/supaaasuge/GrizzCTF2024-Official/assets/158092262/6eb78ed7-604a-4626-8a9a-5eb4984bbabe)
 
-**Step 4**: Attempting to Bypass Authentication
-    Within the source code, `hidden_in_plain_sight` can be found in the comments of the `index.html` page. This is the password to login and get the flag.
+**Step 4**: Logging in and retrieving the flag.
+- Within the source code, `hidden_in_plain_sight` can be found in the comments of the `index.html` page. This is the password to login and get the flag.
 ___
 
 **Step 5**: Accessing the Flag
