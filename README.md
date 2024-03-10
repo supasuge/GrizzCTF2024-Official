@@ -1,5 +1,4 @@
 # GrizzCTF 2024
-###### Last Updated: 03/08/2024 
 
 ### Challenge Table of Contents
 
