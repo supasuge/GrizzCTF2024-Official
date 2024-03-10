@@ -27,7 +27,12 @@ ___
 
     Since the source code is available, look for any hard-coded credentials or weak points in the authentication logic.
     Look at the web pages source code, the HTML and CSS. (CTRL + U) to view source.
-___
+A hint can be found on the home page, in which a sensitive information disclosure is referenced.
+![image](https://github.com/supaaasuge/GrizzCTF2024-Official/assets/158092262/04db8e04-b1f7-4b23-9903-1cfae0d4a850)
+
+Moving on to the login page:
+![image](https://github.com/supaaasuge/GrizzCTF2024-Official/assets/158092262/6eb78ed7-604a-4626-8a9a-5eb4984bbabe)
+
 **Step 4**: Attempting to Bypass Authentication
     Within the source code, `hidden_in_plain_sight` can be found in the comments of the `index.html` page. This is the password to login and get the flag.
 ___
