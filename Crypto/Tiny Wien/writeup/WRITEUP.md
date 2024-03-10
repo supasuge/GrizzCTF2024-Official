@@ -88,19 +88,6 @@ sys.exit(1)
 
 
 # Explanation
-## Import Libraries
-The script starts by importing necessary Python libraries:
-- `Crypto.Util.number` for cryptographic number operations like converting long integers to bytes and vice versa.
-- `Crypto.Random` and `Crypto` for cryptographic functions, although `Crypto.Random` is not explicitly used in the shown code snippet.
-- `sys` for system-specific parameters and functions, used here to terminate the script upon success or failure.
-- `math.isqrt` for computing the integer square root, not directly used in the provided snippet.
-- `sympy` for symbolic mathematics, enabling the solution of equations and manipulation of symbolic expressions.
-
-#### Helper Functions
-- `get_prime()`: Presumed to generate large prime numbers for RSA key creation, not shown in the snippet.
-- `get_cf_expansion(n, d)`: Computes the continued fraction expansion of $$\frac{n}{d}$$ where  $n$  and $d$ represent the RSA public exponent $e$ and the modulus $N$, respectively.
-- `get_convergents(e)`: From the continued fraction expansion, this function generates convergents, which are approximations of the fraction. Each convergent is represented by a pair (numerator, denominator) that closely approximates $$\frac{e}{N}$$
-
 #### RSA Parameters
 - $e$, $N$, and $C$ are the RSA public exponent, modulus, and ciphertext, respectively, specific to this challenge.
 

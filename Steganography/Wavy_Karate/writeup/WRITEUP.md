@@ -26,4 +26,4 @@ done < "$WORDLIST"
 GrizzCTF{lsb_1n_4_w4v_f1l3}
 ```
 
-Truth be told, I am not entirely sure if steghide hides files using LSB Steg (I am going to asssume not)... However I simply forgot to change the flag when I was making the challenge. Happens.
+Truth be told, I am not entirely sure if `steghide` hides files using LSB Steg (I am going to asssume not)... However I simply forgot to change the flag when I was making the challenge. Happens.
