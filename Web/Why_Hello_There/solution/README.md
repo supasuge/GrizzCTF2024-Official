@@ -27,9 +27,29 @@ return render_template_string(f'''
 
 The `name` parameter from the URL is inserted directly into the template. Since there is no sanitization of the `name` parameter, an attacker can exploit this by injecting a template syntax that can be executed by the server.
 
+## Detecting the vulnerability
+- This vulnerability can be detected by providing the following payload:
+```
+https://grizzhacks-why-hello-there.chals.io/?name={{7*7}}
+```
+![image](https://github.com/supaaasuge/GrizzCTF2024-Official/assets/158092262/f756f772-3327-449f-8171-f09c50ba57b8)
+- As you can see, the name parameter changes to `49` within the template. This can be used to execute arbitrary code on the page. Further processable commands can be enumerated using the following:
+
+##### Introspection
+
+You may conduct introspection with the locals object using dir and help to see everything that is available to the template context. You can also use introspection to reach every other application variable. [This](https://github.com/PequalsNP-team/pequalsnp-team.github.io/blob/master/assets/search.py) script written by the DoubleSigma team will traverse over child attributes of request recursively. For example, if you need to reach the blacklisted config var you may access it anyway via:
+```
+{{request.application.__self__._get_data_for_json.__globals__['json'].JSONEncoder.default.__globals__['current_app'].config['FLAG']}}
+```
+##### Extracting classes from the application
+```
+{{config.items}}
+{{''.class.mro()[1].subclasses()}}
+```
+
 ### Exploiting SSTI in Flask
 
-To exploit this vulnerability, an attacker can craft a payload that the Jinja2 template engine will execute. Since the challenge specifies that this is a Windows machine, the goal is to read the contents of `flag.txt`.
+To exploit this vulnerability, an attacker can craft a payload that the Jinja2 template engine will execute. The goal is to read the contents of `flag.txt`.
 
 A common approach to achieve this is to leverage Jinja2's ability to access Python's built-in attributes and functions through the template. An attacker can use this capability to execute arbitrary Python code.
 
