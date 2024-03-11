@@ -1,5 +1,4 @@
-# Bad Authorization
-
+# Cookie Mix
 
 **Description:** I made a super secure login using my own encryption scheme. Can you bypass authorization using a forged cookie somehow? Bypass the login page as the `admin` get the flag.
 
