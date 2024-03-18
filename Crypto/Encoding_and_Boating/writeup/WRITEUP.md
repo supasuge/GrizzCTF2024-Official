@@ -3,9 +3,7 @@
 
 `KIZUU4DFNZYEIVSFLI3WI3KWPFSVMOJRMJWWY6DEK5LGMWSXGVVGEMSSOBRG2ZD2LAZGQMLBIQ4TS===`
 
-- Output from [solve.py](solve.py)
-![alt text](image.png)
-
+###### Source Code
 ```python
 import json
 from base64 import b64encode as honestlynoideawhatimdoing
@@ -19,3 +17,22 @@ with open('ciphertext.txt', 'w') as f:
     f.write(stringjuan.decode())
 ```
 To reverse this, simply base32 decode the given string, then base64 decode the output from the previous base32 encoding. This will result in the plaintext flag.
+
+###### Solution
+```python
+from base64 import b64decode, b32decode
+path = '../src/ciphertext.txt'
+with open(path, 'r') as f:
+    ciphertext = f.read()
+
+# Reverse the encoding steps
+decoded_base32 = b32decode(ciphertext)
+decoded_base64 = b64decode(decoded_base32)
+
+flag = decoded_base64.decode()
+print(flag)
+```
+
+
+- Output from [solve.py](solve.py)
+![alt text](image.png)
