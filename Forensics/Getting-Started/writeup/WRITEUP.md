@@ -8,6 +8,6 @@ echo -n "GrizzCTF{"$(sha256sum data.txt | awk '{print $1}')"}"
 ```
 
 ### Explanation
-`echo -n GrizzCTF{"` - Do not output new lines, wrap in GrizzCTF{................................}
-`$(sha256sum data.txt | awk '{print $1}')"}` - Get the SHA256 hashsum of the file and filter out the SHA256 hashsum using `awk '{print $1}'`.
+- `echo -n GrizzCTF{"` - Do not output new lines, wrap in GrizzCTF{................................}
+- `$(sha256sum data.txt | awk '{print $1}')"}` - Get the SHA256 hashsum of the file and filter out the SHA256 hashsum using `awk '{print $1}'`.
 
