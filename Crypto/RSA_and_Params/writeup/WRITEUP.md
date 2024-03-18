@@ -59,7 +59,7 @@ d = inverse(e, phi)
 2. **Decrypt the Ciphertext:**
    - Apply the decryption formula: `M = C^d mod n`.
 ```python
-plaintext= = pow(ciphertext, d, n)
+plaintext = pow(ciphertext, d, n)
 ```
 3. **Decode the Message:**
    * Transform the decrypted numerical value `M` into its corresponding text representation to reveal the secret message.
