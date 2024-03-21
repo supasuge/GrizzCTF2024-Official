@@ -1,7 +1,8 @@
 # GrizzCTF 2024
 
 ### Challenge Table of Contents
-Below is 29 Challenges I created for GrizzHacksCTF 2024.
+- Below is 29 Challenges I created for GrizzHacksCTF 2024.
+
 ---
 
 ## Cryptography challenges
