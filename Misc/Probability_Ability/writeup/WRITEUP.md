@@ -1,6 +1,5 @@
-Absolutely! Here's a potential writeup as the challenge creator, aiming for a concise and to-the-point style:
 
-Challenge Name: Probability Ability
+# Probability Ability
 
 Category: Miscellaneous
 
