@@ -4,6 +4,6 @@
 
 Once decoded, submit the flag."
 
-[Writeup](Crypto/Based_as_64/writeup/WRITEUP.md)
+[Writeup](https://github.com/supaaasuge/GrizzCTF2024-Official/blob/main/Crypto/Based_as_64/writeup/WRITEUP.md)
 
 
