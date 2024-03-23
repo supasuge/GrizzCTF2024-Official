@@ -1,8 +1,8 @@
 # Probability Ability (500 Points)
 **Description:** Consider the following five events:
 1. Correctly guessing a random 128-bit AES key on the first try.
-2. Winning a lottery with 1 million contestants (the probability is 1/106 ).
-3. Winning a lottery with 1 million contestants 5 times in a row (the probability is (1/106)5 ).
+2. Winning a lottery with 1 million contestants (the probability is 1/10^6 ).
+3. Winning a lottery with 1 million contestants 5 times in a row (the probability is (1/10^6)^5 ).
 4. Winning a lottery with 1 million contestants 6 times in a row.
 5. Winning a lottery with 1 million contestants 7 times in a row. 
 
