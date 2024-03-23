@@ -4,4 +4,6 @@
 
 Once decoded, submit the flag."
 
+[Writeup](Crypto/Based_as_64/writeup/WRITEUP.md)
+
 
