@@ -2,6 +2,51 @@
 *250 Points*
 **Description:** You have been provided the partial plaintext + the ciphertext, can you solve for the missing plaintext given this information and retrieve the flag?
 
+###### Source Code
+```python
+flag = '[REDACTED]'
+###############################################################################################
+#RESOURCES:
+#https://inventwithpython.com/hacking/chapter21.html
+#https://www.cipherchallenge.org/wp-content/uploads/2020/12/Five-ways-to-crack-a-Vigenere-cipher.pdf
+#https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
+###############################################################################################
+import string
+uppers = string.ascii_uppercase
+def encrypt(pt, key):
+	ct = ''
+	for i in range(len(pt)):
+		p = uppers.index(pt[i])
+		k = uppers.index(key[i%len(key)])
+		c = (p + k) % 26
+		ct += uppers[c]
+	return ct
+KNOWNPLAINTEXT = 'GRIZZLYBEARCTF ILOVEGRIZZLY BEARSGRIZZLY BEARS AND CTF MAKES ME HAPPY'
+KNOWNPLAINTEXT = KNOWNPLAINTEXT.replace(' ', '')
+enc = encrypt(flag+KNOWNPLAINTEXT, '[REDACTED]')
+print(enc)
+with open('ciphertext.txt', 'w') as f:
+    f.write("Ciphertext: " + enc + '\n\n')
+    f.write("Key: " + "[REDACTED]"+ "\n\n")
+    f.write("HINT: please note that '{' and '}' have been removed from the flag.\nThe flag format is all capital letters and begins with GRIZZCTF..............")
+```
+
+- `ciphertext.txt`
+```
+Ciphertext: 
+
+GSKZAETGQUPWOVHLBIRJIHUJESGGSKZANYCGASUIMQVFIRJBZMABFCRTIRJBZMABFCRTCNEETGOALGSNGHBRPZ
+
+Known plaintext:
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxGRIZZLYBEARSILOVEGRIZZLYBEARSGRIZZLYBEARSANDCTFMAKESMEHAPPY
+
+Key: [REDACTED]
+
+HINT: please note that '{' and '}' have been removed from the flag.
+The flag format is all capital letters and begins with GRIZZCTF..............
+```
+
 # Understanding the Vigenere Cipher
 The vigenere cipher is a polyalphabetic cipher invented by French Cryptologist **Blaise de Vigenere** in the *16th century*. Encryption with vigenere goes as follows:
 - Take the first letter of the message and the first letter of the key, add their value (letters have a value depending on there alphabetical index order beginning at A=0, B=1, ... Z=25). The result of the addition **modulo 26** give the enciphered letter as a result.
