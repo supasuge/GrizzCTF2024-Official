@@ -1,4 +1,4 @@
-# RSA Review
+## Tine Wien Writeup
 
 ### Source Code
 
@@ -57,6 +57,8 @@ def challenge():
 if __name__ == "__main__":
     challenge()
 ```
+
+#### RSA Review
 
 N is the product of two randomly chosen prime numbers $p$ and $q$. The private key, $d$, is the decryption exponent:
 $$d = e^{-1} \mod ((p-1)(q-1)) = e^{-1} \mod \varphi(N)$$
