@@ -10,7 +10,7 @@
 
 Answer format: `GrizzCTF{int, int, int, int, int}`
 
-- Note: This challenge was originally made as a live service to submit the answer to and receive the flag, however there were not enough docker container server instances for all of the challenges based off of the CTFd hosted tier.
+
 
 ###### Resources
 - [crypto.stackexchange](https://crypto.stackexchange.com/questions/30749/probability-of-guessing-random-128-bit-aes-key)
