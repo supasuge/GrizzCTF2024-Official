@@ -2,7 +2,7 @@
 
 ### Challenge Table of Contents
 - Below is 29 Challenges I created for GrizzHacksCTF 2024 during GrizzHacks Hackathon at Oakland University.
-    - Note this was just a side event, so I didn't want to go full try-hard with pwn/rev so that people still had time to work on there hackathon projects.
+    - Note this was just a side event, so I didn't want to go full try-hard with pwn/rev so that people still had time to work on their hackathon projects.
 
 ---
 
